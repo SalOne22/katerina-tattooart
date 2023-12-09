@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background: 207 31% 6%;
+  --foreground: 0 0% 84%;
+}
