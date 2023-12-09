@@ -8,8 +8,8 @@ export default function BurgerButton({ onClick }: { onClick: () => void }) {
       aria-label="toggle mobile menu"
       onClick={onClick}
     >
-      <Burger className="group-[[data-state='open']]:opacity-0 transition-opacity" />
-      <Cross className="absolute top-0 group-[[data-state='closed']]:opacity-0 transition-opacity" />
+      <Burger className="group-[[data-state='open']]:opacity-0 transition-opacity duration-500" />
+      <Cross className="absolute top-0 group-[[data-state='closed']]:opacity-0 transition-opacity duration-500" />
     </button>
   );
 }
