@@ -1,17 +1,35 @@
-import Button from '@components/button';
+'use client';
+
+import { useState } from 'react';
 
 import Logo from '@assets/icons/logo.svg';
-import Burger from '@assets/icons/burger.svg';
+
+import Button from '@components/button';
+
+import BurgerButton from './components/BurgerButton';
+import MobileMenu from './components/MobileMenu';
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header className="h-[3.875rem] border-b border-white/60">
-      <div className="container h-full flex items-center justify-between">
+    <header
+      className="overflow-hidden fixed h-full w-full border-b border-white/60 data-[state=open]:max-h-[calc(3.875rem+24rem)] max-h-[3.875rem] group transition-[max-height] bg-background/80"
+      data-state={isMenuOpen ? 'open' : 'closed'}
+    >
+      <div className="container h-[3.875rem] flex items-center justify-between relative bg-background">
         <Logo />
-        <Button type="button" className="ml-auto mr-6">
+
+        <Button
+          type="button"
+          className="absolute left-1/2 min-w-fit whitespace-nowrap -translate-x-1/2"
+        >
           Безкоштовна консультація
         </Button>
-        <Burger />
+
+        <BurgerButton onClick={() => setIsMenuOpen((prev) => !prev)} />
+
+        <MobileMenu open={isMenuOpen} />
       </div>
     </header>
   );

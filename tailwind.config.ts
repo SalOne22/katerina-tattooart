@@ -23,7 +23,11 @@ const config: Config = {
     extend: {
       colors: {
         background: 'hsl(var(--background))',
+        'alt-background': 'hsl(var(--alt-background))',
         foreground: 'hsl(var(--foreground))',
+      },
+      fontFamily: {
+        sans: ['var(--raleway)'],
       },
     },
   },
