@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <header
-      className="overflow-hidden fixed h-full w-full border-b border-white/60 data-[state=open]:max-h-[calc(3.875rem+24rem)] max-h-[3.875rem] group transition-[max-height] bg-background/80 duration-500"
+      className="overflow-hidden fixed h-full w-full border-b top-0 border-white/60 data-[state=open]:max-h-[calc(3.875rem+24rem)] max-h-[3.875rem] group transition-[max-height] bg-background/80 duration-500"
       data-state={isMenuOpen ? 'open' : 'closed'}
     >
       <div className="container h-[3.875rem] flex items-center justify-between relative bg-background">

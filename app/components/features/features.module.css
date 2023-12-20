@@ -1,0 +1,15 @@
+.feature {
+  @apply absolute top-0 left-1/2 -translate-x-1/2 transition-all duration-500;
+}
+
+.feature.active {
+  @apply scale-150;
+}
+
+.feature.prev {
+  @apply left-0;
+}
+
+.feature.next {
+  @apply left-full;
+}
